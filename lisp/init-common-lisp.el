@@ -6,6 +6,9 @@
                               (normal-mode))))
 
 (after-load 'slime
+  (when (executable-find "ccl")
+    (add-to-list 'slime-lisp-implementations
+                 '(ccl ("ccl") :coding-system utf-8-unix)))
   (when (executable-find "sbcl")
     (add-to-list 'slime-lisp-implementations
                  '(sbcl ("sbcl") :coding-system utf-8-unix)))

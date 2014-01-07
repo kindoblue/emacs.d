@@ -93,6 +93,7 @@
 (when *is-a-mac*
   (require-package 'osx-location))
 (require-package 'regex-tool)
+(require-package 'fill-column-indicator)
 
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient

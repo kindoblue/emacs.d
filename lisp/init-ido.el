@@ -6,8 +6,11 @@
 (setq ido-auto-merge-work-directories-length 0)
 (setq ido-use-virtual-buffers t)
 
-(when (maybe-require-package 'ido-ubiquitous)
-  (ido-ubiquitous-mode t))
+(when (eval-when-compile (>= emacs-major-version 24))
+ (require-package 'ido-ubiquitous)
+ (require-package 'ido-vertical-mode)
+ (ido-ubiquitous-mode t)
+ (ido-vertical-mode t))
 
 ;; Use smex to handle M-x
 (when (maybe-require-package 'smex)

@@ -8,7 +8,9 @@
 
 (when (eval-when-compile (>= emacs-major-version 24))
  (require-package 'ido-ubiquitous)
- (ido-ubiquitous-mode t))
+ (require-package 'ido-vertical-mode)
+ (ido-ubiquitous-mode t)
+ (ido-vertical-mode t))
 
 ;; Use smex to handle M-x
 (require-package 'smex)

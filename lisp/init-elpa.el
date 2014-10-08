@@ -30,6 +30,8 @@
                                                 "http://melpa.org/packages/"
                                               "https://melpa.org/packages/")))
 
+(when (not package-archive-contents)
+  (package-refresh-contents))
 
 
 ;; If gpg cannot be found, signature checking will fail, so we

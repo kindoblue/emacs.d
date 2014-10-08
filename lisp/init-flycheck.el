@@ -6,6 +6,7 @@
 (setq flycheck-check-syntax-automatically '(save idle-change mode-enabled)
       flycheck-idle-change-delay 0.8)
 
-(eval-after-load 'flycheck '(setq flycheck-checkers (delq 'emacs-lisp-checkdoc flycheck-checkers)))
+(setq flycheck-display-errors-function #'flycheck-display-error-messages-unless-error-list)
+
 
 (provide 'init-flycheck)

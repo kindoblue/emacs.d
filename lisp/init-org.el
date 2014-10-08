@@ -5,6 +5,8 @@
   (require-package 'org-mac-link)
   (require-package 'org-mac-iCal))
 
+(setq org-default-notes-file "~/Documents/notes.org")
+     (define-key global-map "\C-cc" 'org-capture)
 
 (define-key global-map (kbd "C-c l") 'org-store-link)
 (define-key global-map (kbd "C-c a") 'org-agenda)

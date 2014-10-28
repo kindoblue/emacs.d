@@ -84,9 +84,6 @@
 (require 'init-rails)
 (require 'init-sql)
 
-;; (require 'init-ggtags)
-(require 'init-skewer)
-
 (require 'init-paredit)
 (require 'init-lisp)
 (require 'init-slime)

@@ -1,14 +1,14 @@
 (require-package 'unfill)
-(require-package 'whole-line-or-region)
 
 (when (fboundp 'electric-pair-mode)
   (electric-pair-mode))
+(when (eval-when-compile (version< "24.4" emacs-version))
+  (electric-indent-mode 1))
 
 ;;----------------------------------------------------------------------------
 ;; Some basic preferences
 ;;----------------------------------------------------------------------------
 (setq-default
- blink-cursor-delay 0
  blink-cursor-interval 0.4
  bookmark-default-file (expand-file-name ".bookmarks.el" user-emacs-directory)
  buffers-menu-max-size 30
@@ -260,6 +260,7 @@
 ;;----------------------------------------------------------------------------
 ;; Cut/copy the current line if no region is active
 ;;----------------------------------------------------------------------------
+(require-package 'whole-line-or-region)
 (whole-line-or-region-mode t)
 (diminish 'whole-line-or-region-mode)
 (make-variable-buffer-local 'whole-line-or-region-mode)
@@ -338,7 +339,7 @@ With arg N, insert N newlines."
 
 
 (require-package 'guide-key)
-(setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-x 5" "C-c ;" "C-c ; f" "C-c ' f" "C-x n"))
+(setq guide-key/guide-key-sequence '("C-x" "C-c" "C-x 4" "C-x 5" "C-c ;" "C-c ; f" "C-c ' f" "C-x n"))
 (guide-key-mode 1)
 (diminish 'guide-key-mode)
 

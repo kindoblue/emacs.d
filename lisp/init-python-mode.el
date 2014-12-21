@@ -11,4 +11,6 @@
 (venv-initialize-eshell) ;; for eshell support
 (setq venv-location "~/.virtualenvs")
 
+(elpy-enable)
+
 (provide 'init-python-mode)

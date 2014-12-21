@@ -13,4 +13,8 @@
 
 (elpy-enable)
 
+;; remember to install jedy and flake8
+;; pip install jedi
+;; pip install flake8
+
 (provide 'init-python-mode)

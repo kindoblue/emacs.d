@@ -1,4 +1,8 @@
 (global-linum-mode t)
-(setq mac-option-modifier 'control)
-(setq mac-command-modifier 'meta)
+
+(when *is-a-mac*
+  (setq mac-option-modifier 'control)
+  (setq mac-right-option-modifier t)
+  (setq mac-command-modifier 'meta))
+
 (provide 'init-local)

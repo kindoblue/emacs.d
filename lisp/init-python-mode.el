@@ -1,3 +1,8 @@
+;;; init-python-mode.el --- to configure python environment
+;;;
+;;; Commentary:
+;;;
+;;; Code:
 (setq auto-mode-alist
       (append '(("SConstruct\\'" . python-mode)
 		("SConscript\\'" . python-mode))
@@ -18,3 +23,4 @@
 ;; pip install flake8
 
 (provide 'init-python-mode)
+;;; init-python-mode.el ends here

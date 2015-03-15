@@ -5,8 +5,9 @@
 ;;; Code:
 
 (require-package 'ensime)
+(require-package 'scala-mode2)
+(require-package 'sbt-mode)
 
-(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 
 (provide 'init-scala)
 

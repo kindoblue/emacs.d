@@ -11,6 +11,7 @@
 (require-package 'pip-requirements)
 (require-package 'elpy)
 (require-package 'virtualenvwrapper)
+(require-package 'jedi)
 
 (venv-initialize-interactive-shells) ;; for interactive shell support
 (venv-initialize-eshell) ;; for eshell support

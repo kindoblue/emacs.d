@@ -17,10 +17,9 @@
 (venv-initialize-eshell) ;; for eshell support
 (setq venv-location "~/.virtualenvs")
 
-(elpy-enable t)
+(elpy-enable)
 (setq elpy-rpc-backend "jedi")
-(when (executable-find "ipython")
-  (elpy-use-ipython))
+;(elpy-use-ipython)
 
 (define-key python-mode-map (kbd "RET")
   'newline-and-indent)

@@ -42,17 +42,8 @@
 
 
   (add-hook 'js2-mode-hook (lambda () (setq mode-name "JS2")))
-
-<<<<<<< 6d5ef5be0c09a0b8217831cc194019b5ec6647ef
-=======
   (add-hook 'js-mode-hook 'js2-minor-mode)
-  (add-hook 'js2-mode-hook 'ac-js2-mode)
 
-  (setq-default
-   js2-basic-offset preferred-javascript-indent-level
-   js2-bounce-indent-p nil)
-
->>>>>>> simplified (no clue what I am doing) and added some comments to shut up flycheck
   (after-load 'js2-mode
     (js2-imenu-extras-setup)))
 

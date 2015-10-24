@@ -17,9 +17,13 @@
 (venv-initialize-eshell) ;; for eshell support
 (setq venv-location "~/.virtualenvs")
 
-(add-hook 'python-mode-hook 'elpy-enable)
+(elpy-enable t)
 (setq elpy-rpc-backend "jedi")
+(when (executable-find "ipython")
+  (elpy-use-ipython))
 
+(define-key python-mode-map (kbd "RET")
+  'newline-and-indent)
 
 ;; remember to install jedy and flake8
 ;; pip install jedi

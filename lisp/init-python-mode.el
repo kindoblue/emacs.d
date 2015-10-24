@@ -18,6 +18,8 @@
 (setq venv-location "~/.virtualenvs")
 
 (add-hook 'python-mode-hook 'elpy-enable)
+(setq elpy-rpc-backend "jedi")
+
 
 ;; remember to install jedy and flake8
 ;; pip install jedi

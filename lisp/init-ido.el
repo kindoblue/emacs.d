@@ -12,6 +12,9 @@
  (ido-ubiquitous-mode t)
  (ido-vertical-mode t))
 
+(when (maybe-require-package 'ido-vertical-mode)
+  (ido-vertical-mode t))
+
 ;; Use smex to handle M-x
 (when (maybe-require-package 'smex)
   ;; Change path for ~/.smex-items

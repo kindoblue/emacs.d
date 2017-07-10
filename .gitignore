@@ -1,6 +1,7 @@
 /url/cache
 /.emacs.desktop
 /auto-save-list
+/network-security.data
 /.session
 /session.*
 *.elc
@@ -45,3 +46,4 @@ site-lisp/package/
 /anaconda-mode/
 /.historian
 /.uptimes.el
+/rake.cache

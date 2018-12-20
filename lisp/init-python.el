@@ -17,6 +17,15 @@
 (venv-initialize-eshell) ;; for eshell support
 (setq venv-location "~/.virtualenvs")
 
+(when (maybe-require-package 'anaconda-mode)
+  (after-load 'python
+    (add-hook 'python-mode-hook 'anaconda-mode)
+    (add-hook 'python-mode-hook 'anaconda-eldoc-mode))
+  (when (maybe-require-package 'company-anaconda)
+    (after-load 'company
+      (after-load 'python
+        (push 'company-anaconda company-backends)))))
+
 (elpy-enable)
 (setq elpy-rpc-backend "jedi")
 ;(elpy-use-ipython)
@@ -28,5 +37,5 @@
 ;; pip install jedi
 ;; pip install flake8
 
-(provide 'init-python-mode)
+(provide 'init-python)
 ;;; init-python-mode.el ends here

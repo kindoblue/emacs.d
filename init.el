@@ -67,29 +67,23 @@
 (require 'init-uniquify)
 (require 'init-ibuffer)
 (require 'init-flycheck)
-
 (require 'init-recentf)
 (require 'init-smex)
 (require 'init-ivy)
-;;(require 'init-helm)
 (require 'init-hippie-expand)
 (require 'init-company)
 (require 'init-windows)
 (require 'init-sessions)
 (require 'init-mmm)
-
 (require 'init-editing-utils)
 (require 'init-whitespace)
-
 (require 'init-vc)
 (require 'init-darcs)
 (require 'init-git)
 (require 'init-github)
-
 (require 'init-projectile)
-
+(require 'init-realgud)
 (require 'init-compile)
-;;(require 'init-crontab)
 (require 'init-textile)
 (require 'init-markdown)
 (require 'init-csv)
@@ -114,7 +108,7 @@
 (require 'init-yaml)
 (require 'init-docker)
 (require 'init-terraform)
-;;(require 'init-nix)
+
 (maybe-require-package 'nginx-mode)
 
 (require 'init-paredit)
@@ -132,8 +126,6 @@
 (require 'init-folding)
 (require 'init-dash)
 
-;;(require 'init-twitter)
-;; (require 'init-mu)
 (require 'init-ledger)
 ;; Extra packages which don't require any configuration
 
@@ -143,10 +135,10 @@
 (require-package 'dsvn)
 (when *is-a-mac*
   (require-package 'osx-location))
-<<<<<<< HEAD
+
 (require-package 'fill-column-indicator)
 (maybe-require-package 'regex-tool)
-=======
+
 (unless (eq system-type 'windows-nt)
   (maybe-require-package 'daemons))
 (maybe-require-package 'dotenv-mode)
@@ -154,8 +146,6 @@
 (when (maybe-require-package 'uptimes)
   (setq-default uptimes-keep-count 200)
   (add-hook 'after-init-hook (lambda () (require 'uptimes))))
-
->>>>>>> upstream/master
 
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient
@@ -183,8 +173,6 @@
 ;; Allow users to provide an optional "init-local" containing personal settings
 ;;----------------------------------------------------------------------------
 (require 'init-local nil t)
-
-
 
 (provide 'init)
 

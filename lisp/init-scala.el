@@ -5,7 +5,7 @@
 ;;; Code:
 
 (require-package 'ensime)
-(require-package 'scala-mode2)
+(require-package 'scala-mode)
 (require-package 'sbt-mode)
 
 

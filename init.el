@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t -*-
+
 ;;; init.el --- my emacs configuration file
 ;;;
 ;;; Commentary:
@@ -5,7 +7,6 @@
 ;;;
 ;;; Code:
 
-;; -*- lexical-binding: t -*-
 (setq debug-on-error t)
 
 ;;; This file bootstraps the configuration, which is divided into
